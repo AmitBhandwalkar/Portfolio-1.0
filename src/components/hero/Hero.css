@@ -198,10 +198,9 @@
     }
   }
   
+
   @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-    }
+  
   
     .bg {
       height: 60%;
@@ -218,25 +217,37 @@
     }
   
     .hTitle {
-      font-size: 48px;
+      font-size: 28px;
     }
   
-    .awards {
-      width: 100%;
-    }
-  
-    .awardList {
-      justify-content: center;
-    }
-  
-    .hSection.right {
+    .award {
       justify-content: end;
+      margin-right: 30%;
     }
+    .award h2{
+      font-size: 1.2rem;
+    }
+    
+  .home__scroll{
+    margin-bottom: 1rem;
+    margin-right: 40%;
+  }
+  .contactButton{
+    margin-bottom: 6.5rem;
+  }
   
     /* .follow, */
-    .bubbleContainer,
-    .certificate {
-      display: none;
+    .bubbleContainer{
+     gap: 0;
+     display: block;
+     width: 50%;
+    }
+    .bubble {
+      font-size: 8px;
+      width: 90%;
+    }
+    .bubbleContainer img{
+     display: none;
     }
   }
   

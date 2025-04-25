@@ -96,7 +96,7 @@ const About = () => {
               animate={isInView ? "animate" : "initial"}
               download=""
               href="files/Amit Bhandwalkar-cv.pdf"
-              className="about__button "
+              className="about__button"
             >
               <span>Download CV </span>
               <i className="fa-solid fa-download"></i>
@@ -106,7 +106,7 @@ const About = () => {
       </div>
 
 
-      <div className="aSection right">
+      <div className="aSection right aSection-right">
        
           <ComputerModelContainer />
         

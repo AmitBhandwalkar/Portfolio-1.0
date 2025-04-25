@@ -86,17 +86,6 @@ const skill_list = [
 
         ))}
 
-     
-
-        
-     
-
-     
-       
-
-        
-       
-
 
       </div>
 

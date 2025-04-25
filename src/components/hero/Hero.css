@@ -208,6 +208,7 @@
   
     .hSection {
       width: 100%;
+      justify-content: left;
     }
   
     .hSection.left {
@@ -217,37 +218,48 @@
     }
   
     .hTitle {
-      font-size: 28px;
+      font-size: 1.2rem;
     }
   
     .award {
       justify-content: end;
-      margin-right: 30%;
+      left: 0;
     }
     .award h2{
-      font-size: 1.2rem;
+       font-size: 0.8rem
+    }
+    .award p{
+      font-size: 0.7rem !important;
     }
     
   .home__scroll{
-    margin-bottom: 1rem;
-    margin-right: 40%;
+    margin-top: 220px;
+   
+  }
+  .conBtn-svg{
+    height: 80px;
+    width: 80px;
   }
   .contactButton{
-    margin-bottom: 6.5rem;
+    margin-top: 200px;
   }
   
     /* .follow, */
     .bubbleContainer{
      gap: 0;
      display: block;
-     width: 50%;
+     width: 40%;
     }
     .bubble {
-      font-size: 8px;
-      width: 90%;
+      font-size: 0.3rem;
+      width: 100%;
     }
     .bubbleContainer img{
      display: none;
+    }
+    .follow{
+      margin-bottom: 4rem;
+      width: 30%;
     }
   }
   

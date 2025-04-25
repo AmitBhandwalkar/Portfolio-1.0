@@ -2,12 +2,9 @@
  text-align: center;
 
 }
-
-
 .skills-container h1 {
   text-align: center;
 }
-
 .skills-list{
   margin-top: 1rem;
   display: grid;
@@ -119,3 +116,52 @@
     opacity: 1;
     transform: translate3d(0%, -30%, 100px);
   } 
+
+
+  @media (max-width: 768px) {
+.skills-container h1 {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .skills-list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .skill-card {
+      padding: 0.75rem;
+    }
+  
+    .skill-card-icon {
+      /* margin-top: 0.25rem;
+      margin-bottom: 0; */
+      margin: 0;
+    }
+  
+    .skill-title {
+      font-size: 1rem;
+    }
+  
+    .card {
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+  
+    .card .icon {
+      width: 4rem;
+      font-size: 1.8rem;
+    }
+  
+    .character {
+      margin-left: 5%;
+    }
+    .skill-card-text{
+      margin-top: 0;
+    }
+    .skill-card-text p{
+      font-size: 0.5rem;
+    }
+
+  }

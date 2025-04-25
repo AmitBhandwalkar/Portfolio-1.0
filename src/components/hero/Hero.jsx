@@ -119,7 +119,7 @@ const Hero = () => {
               ease: "linear",
             }}
          >
-         <svg viewBox="0 0 200 200" width="120" height="130">
+         <svg viewBox="0 0 200 200" width="120" height="130" className="conBtn-svg">
               <circle cx="100" cy="100" r="90" fill="pink" />
               <path
                 id="innerCirclePath"

@@ -1,40 +1,52 @@
-import './App.css'
-import Hero from './components/hero/Hero'
-import About from './components/about/About'
-import Skills from './components/Skills/Skills'
-import Contact from './components/contact/Contact'
-import Navbar from './components/Navbar/Navbar'
+import './App.css';
+import { Suspense, lazy } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+
+// Lazy load components
+const Hero = lazy(() => import('./components/hero/Hero'));
+const About = lazy(() => import('./components/about/About'));
+const Skills = lazy(() => import('./components/Skills/Skills'));
+const Contact = lazy(() => import('./components/contact/Contact'));
+const Projects = lazy(() => import('./components/Projects/Projects'));
+const WorkExperience = lazy(() => import('./components/Work/WorkExperience'));
 
 function App() {
-  
+  return (
+    <>
+      <div className="container">
+        <Navbar />
 
-  return(
-    <div className='container'>
-    
-    <Navbar/>
-     
-    <section id='#hero'>
-       <Hero/>
-    </section>
-     
-     <section id='#about'> 
-       <About/>
-     </section>
-          
-      <section id='#skills' >
-        <Skills/>
-      </section>
+        <Suspense fallback={<div className="lazy-loader">Loading...</div>}>
+          <section id="hero">
+            <Hero />
+          </section>
 
-     <section id='#contact'>
-     <Contact/>
-     </section>
+          <section id="about">
+            <About />
+          </section>
 
-  
+          <section id="skills">
+            <Skills />
+          </section>
 
+          <section id="project">
+            <Projects />
+          </section>
 
-    </div>
-  )
+          <section id="workExperience">
+            <WorkExperience />
+          </section>
 
+          <section id="contact">
+            <Contact />
+          </section>
+        </Suspense>
+      </div>
+
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;

@@ -31,7 +31,7 @@ a{
 }
 
 section{
-    height: 100vh; 
+
     /* scroll-snap-align: center;
     padding-top: 5rem; */
 }
@@ -57,3 +57,10 @@ section{
         height: fit-content; ;
     }
  }
+
+ .lazy-loader {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #666;
+}

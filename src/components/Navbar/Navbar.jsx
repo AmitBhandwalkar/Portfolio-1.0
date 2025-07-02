@@ -21,22 +21,22 @@ const Navbar = ()=>{
                 <h2>Amit Bhandwalkar</h2> 
                 <ul>
                     <li >
-                      <a className="menu-item">Home</a>
-                      </li>
-                    <li >
-                      <a className="menu-item">About</a>
+                      <a className="menu-item" href="#hero">Home</a>
                       </li>
                     <li>
-                      <a className="menu-item">Skills</a>
+                      <a className="menu-item" href="#about">About</a>
+                      </li>
+                    <li>
+                      <a className="menu-item" href="#skills">Skills</a>
                     </li>
                     <li>
-                      <a className="menu-item">Projects</a>
+                      <a className="menu-item" href="#project">Projects</a>
                     </li>
                     <li>
-                      <a className="menu-item">Work</a>
+                      <a className="menu-item" href="#workExperience" >Work</a>
                     </li>
                     <li>
-                      <a className="menu-item">Contact ME</a>
+                      <a className="menu-item" href="#contact">Contact ME</a>
                     </li>
                 </ul>
                 <button className="menu-btn" onClick={toggleMenu}>

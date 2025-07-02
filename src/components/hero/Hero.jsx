@@ -161,7 +161,7 @@ const Hero = () => {
           </Suspense>
         </Canvas>
           <div className="hImg">
-            <img src="./hero(small).png" alt="" />
+            <img src="./images/hero(small).webp" alt="" />
           </div>
          </div>
     </div>

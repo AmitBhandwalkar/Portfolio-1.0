@@ -1,0 +1,79 @@
+.Projects-container {
+  height: 100%;
+  padding-top: 5rem;
+  margin-bottom: 10rem;
+  padding-bottom: 0;
+
+  .Projects-title {
+   font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00ffff;
+  position: relative;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .glow-underline::before,
+  .glow-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #00ffff, #ff00ff);
+    transition: transform 0.4s ease;
+    transform: scaleX(0);
+  }
+
+  .glow-underline::after {
+    bottom: -5px;
+    left: 0;
+    transform-origin: right;
+  }
+
+  .glow-underline::before {
+    top: -5px;
+    left: 0;
+    transform-origin: left;
+  }
+
+  .glow-underline:hover::after,
+  .glow-underline:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.Projects-swiper {
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 255, 255, 0.2);
+  transition: box-shadow 0.4s ease;
+  &:hover {
+    box-shadow: 0 6px 40px rgba(0, 255, 255, 0.4);
+  }
+}
+
+/* Swiper bullets */
+.swiper-pagination {
+  bottom: 20px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid #00ffff;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #00ffff;
+  opacity: 1;
+  transform: scale(1.4);
+  box-shadow: 0 0 8px #00ffff;
+}

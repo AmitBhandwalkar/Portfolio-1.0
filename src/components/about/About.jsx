@@ -95,10 +95,10 @@ const About = () => {
               variants={dButtonVariants}
               animate={isInView ? "animate" : "initial"}
               download=""
-              href="files/Amit Bhandwalkar-cv.pdf"
+              href="https://amitbhandwalkar.github.io/resume/"
               className="about__button"
             >
-              <span>Download CV </span>
+              <span>Download & View CV </span>
               <i className="fa-solid fa-download"></i>
             </motion.a>
           </div>

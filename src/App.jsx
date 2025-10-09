@@ -14,10 +14,11 @@ const WorkExperience = lazy(() => import('./components/Work/WorkExperience'));
 function App() {
   return (
     <>
+       <Suspense fallback={<div className="lazy-loader">Loading...</div>}>
       <div className="container">
         <Navbar />
 
-        <Suspense fallback={<div className="lazy-loader">Loading...</div>}>
+     
           <section id="hero">
             <Hero />
           </section>
@@ -41,10 +42,11 @@ function App() {
           <section id="contact">
             <Contact />
           </section>
-        </Suspense>
+    
       </div>
 
       <Footer />
+          </Suspense>
     </>
   );
 }

@@ -4,9 +4,9 @@ import './WorkExperience.scss';
 
 const workData = [
   {
-    role: 'Web Application Developer',
+    role: 'Pharmaceutical Web Applications',
     company: 'Silitzer Pharma, Pune',
-    period: 'Feb 2023 – Present',
+    techStack: ['MERN Stack', 'React.js', 'Node.js', 'Express', 'MongoDB', 'Redux Toolkit', 'REST APIs'],
     highlights: [
       'Built and maintained full-stack MERN web apps, reducing manual work by 25%',
       'Developed responsive UIs in React.js, increasing engagement by 30%',
@@ -15,13 +15,30 @@ const workData = [
       'Contributed in Agile sprints, achieving 95% on-time delivery',
     ],
   },
-  // Add more work items here if needed
+  {
+    role: 'Agro Export Business Web Applications',
+    company: 'Atlntix Exports',
+    techStack: ['Html', 'Css', 'JavaScript', ],
+    highlights: [
+      'Designed and deployed a responsive product showcase website, streamlining client inquiries and improving product visibility',
+    ],
+  },
+  {
+    role: 'Farm Management Web Applications',
+    company: 'B-Farm',
+    techStack: ['React.js', 'FastApi', 'Postgresql'],
+    highlights: [
+      'Built a farm management system covering crop plantation, irrigation, spraying, and production tracking',
+      'Automated irrigation and pesticide schedules to improve efficiency and reduce errors',
+      'Developed dashboards for cost monitoring, yield forecasting, and data-driven decision-making',
+    ],
+  },
 ];
 
 const WorkExperience = () => {
   return (
     <section className="work-experience">
-      <h2 className="section-title">Work Experience</h2>
+      <h2 className="section-title">Freelance Work Experience</h2>
       <div className="timeline">
         {workData.map((item, index) => (
           <motion.div
@@ -39,7 +56,18 @@ const WorkExperience = () => {
             <div className="timeline-dot" />
             <div className="timeline-content">
               <h3>{item.role}</h3>
-              <p className="company">{item.company} | {item.period}</p>
+              <p className="company">{item.company}</p>
+
+              {/* 🔹 Tech Stack Section */}
+              <div className="tech-stack">
+                <strong>Tech Stack:</strong>
+                <div className="tech-tags">
+                  {item.techStack.map((tech, i) => (
+                    <span key={i} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+
               <ul>
                 {item.highlights.map((point, i) => (
                   <li key={i}>{point}</li>

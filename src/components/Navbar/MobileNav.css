@@ -1,54 +1,92 @@
-
-
-
-.mobile-menu{
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    background-color: rgba(0,0,0,0.3);
-    position: fixed;
-    left: 1rem;
-    top: 0;
-    z-index: 999 !important;
-    box-shadow: 0px 29px 80px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-    transform: translateX(-100vw);
-    opacity: 0;
-}
-
-.mobile-menu-container {
-
-    width: 40vw;
-    height: 100vh;
-    /* background-color: #151027; */
-    padding: 2rem;
-    backdrop-filter: blur(2px);
-}
-
-.mobile-menu.active{
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.mobile-menu img{
-    margin-bottom: 3rem;
-}
-
-.mobile-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    list-style: none;
-    margin-left: -2rem;
-    padding-left: 1rem !important;
-}
-
-@media(max-width: 769px){
-
-.mobile-menu{
-    display: block;
-
+.fab-nav {
+  position: fixed;
+  top: 2px;       /* 👈 move to top */
+  left: 2px;      /* 👈 align to left */
+  z-index: 999;
 }
 
 
+.fab-btn {
+  width: 50px;
+  height: 50px;
+  background: #49288b; 
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+
+.fab-btn.open {
+  transform: rotate(180deg);       /* rotate on click */
+  background: #3a2a6e;             /* slightly different color when open */
+}
+
+.fab-menu {
+  position: absolute;
+  top: 80px;       /* 👈 place below the button */
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+
+.fab-menu li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  margin-bottom: 15px;
+}
+
+.fab-menu.open {
+  pointer-events: auto;
+}
+
+.fab-menu.open li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fab-menu li a {
+  width: 50px;
+  height: 50px;
+   background: #4b3a86;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.fab-menu li a:hover {
+  background: #6b57b5
+}
+
+.fab-menu li a span {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #21232a;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fab-menu li a:hover span {
+  opacity: 1;
 }

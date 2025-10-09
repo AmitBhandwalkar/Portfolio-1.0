@@ -22,7 +22,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        © 2025 AmitBhandwlkar.com. All rights reserved.
+        © 2025 AmitBhandwalkar.com. All rights reserved.
       </div>
     </section>
   );

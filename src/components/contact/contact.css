@@ -106,8 +106,8 @@ label {
 /* 🌐 Responsive Design */
 @media (max-width: 768px) {
   .contact {
+    height: fit-content;
     flex-direction: column;
-    margin-top: 1rem;
   }
 
   .cSection {

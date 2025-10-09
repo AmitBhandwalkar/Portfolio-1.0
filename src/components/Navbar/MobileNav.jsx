@@ -1,44 +1,46 @@
-import React from "react";
-import './MobileNav.css'
+import React, { useState } from "react";
+import {
+  FaHome,
+  FaUser,
+  FaLaptopCode,
+  FaProjectDiagram,
+  FaBriefcase,
+  FaEnvelope
+} from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+import "./MobileNav.css";
 
+const MobileNav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-const MobileNav = ({ isOpen, toggleMenu}) =>{
-    return(
-        <>
-        <div className={`mobile-menu ${isOpen ? "active":""}`} onClick={toggleMenu} >
-                <div className="mobile-menu-container" onClick={(e) => e.stopPropagation()}>
-                  <img src="./logo-1.png" alt="" className="logo" />
-                  <ul>
-                    <li>
-                        <a href="#" className="menu-item">Home</a>
-                    </li>
+  const menuItems = [
+    { label: "Home", icon: <FaHome />, href: "#hero" },
+    { label: "About", icon: <FaUser />, href: "#about" },
+    { label: "Skills", icon: <FaLaptopCode />, href: "#skills" },
+    { label: "Projects", icon: <FaProjectDiagram />, href: "#project" },
+    { label: "Work", icon: <FaBriefcase />, href: "#workExperience" },
+    { label: "Contact Me", icon: <FaEnvelope />, href: "#contact" },
+  ];
 
-                    <li>
-                     <a className="menu-item">About</a>
-                    </li>
+  return (
+    <div className="fab-nav">
+   <button className={`fab-btn ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+  {isOpen ? <IoMdClose /> : "Menu"}
+</button>
 
-                    <li>
-                      <a className="menu-item">Skills</a>
-                    </li>
+      <ul className={`fab-menu ${isOpen ? "open" : ""}`}>
+        {menuItems.map((item, i) => (
+          <li key={i} style={{ transitionDelay: `${i * 0.1}s` }}>
+            <a href={item.href} onClick={() => setIsOpen(false)}>
+              {item.icon}
+              <span>{item.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-                    <li>
-                      <a className="menu-item">Projects</a>
-                    </li>
-
-                    <li>
-                      <a className="menu-item">Work</a>
-                    </li>
-
-                    <li>
-                      <a className="menu-item">Contact ME</a>
-                    </li>
-
-                  </ul>
-                </div>
-        </div>
-        </>
-    )
-}
-
-
-export default MobileNav 
+export default MobileNav;
